@@ -1,9 +1,21 @@
 # Simple_Calculator
-This project aimed to learn more about Python.
-I created a Iphone like calculator using Python.
-This calculator features all the basics operation used.
 
-# Prerequisite
-To make this program work, you will need to install customtkinter. To do that, you will need to execute this command 
-```sudo pip install customtkinter```
-Then execute the python program.
+This project was created as part of the learning process for Python. It implements a calculator with a design similar to an iPhone calculator using Python. The calculator supports fundamental arithmetic operations.
+
+## Prerequisites
+
+Before running the program, ensure you have the `customtkinter` library installed. You can install it using the following command:
+
+```bash
+sudo pip install customtkinter
+```
+
+# Run the Python program
+
+```bash
+python calculator.py
+```
+This will launch the calculator application. Feel free to perform calculations using the provided interface.
+
+# Conctact
+Thank you for visiting my project. If you have any comments or questions, please feel free to contact me via email at the following address: cruchetsimon@gmail.com
