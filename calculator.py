@@ -54,16 +54,10 @@ def execute_operation(operation):
         if operation == 'PLUS':
             result = nb2 + curent_nb
         elif operation == 'MINUS':
-            result = curent_nb - nb
+            result = curent_nb - nb2
             print(result)
         elif operation == 'TIMES':
             result = nb2 * curent_nb
-            print(result)
-        elif operation == 'POW':
-            result = curent_nb * curent_nb
-            print(result)
-        elif operation == 'SQRT':
-            result = sqrt(curent_nb)
             print(result)
         elif operation == 'DIVIDED':
             if curent_nb == 0:
@@ -118,11 +112,26 @@ def execute_current_operation():
         execute_operation(op)
         op = False
 
+def execute_pow_key(pow):
+    global curent_nb
+    curent_nb = _get_nb_from_stack()
+    if pow == "POW":
+        print(str(curent_nb))
+        result = curent_nb **2
+    elif pow == "SQRT":
+        print(str(curent_nb))
+        result = sqrt(curent_nb)
+    stack_screen.clear()
+    curent_nb = result
+    print_result()
+
 def pressed_key(key):
     if key in ['0','1','2','3','4','5','6','7','8','9','.']:
         execute_number_key(key)
-    elif key in ['PLUS','MINUS','TIMES','DIVIDED','SQRT','POW']:
+    elif key in ['PLUS','MINUS','TIMES','DIVIDED']:
         execute_symbol_key(key)
+    elif key in ['SQRT','POW']:
+        execute_pow_key(key)
     elif key == "EQUAL":
         execute_equal_key()
     elif key == 'AC':
@@ -156,7 +165,7 @@ plus = customtkinter.CTkButton(app, text="+", width=75, height=75, font = font_b
 minus = customtkinter.CTkButton(app, text="-", width=75, height=75, font = font_button, fg_color = button_orange ,text_color = button_white, command= lambda : pressed_key('MINUS'))
 divided = customtkinter.CTkButton(app, text="÷", width=75, height=75, font = font_button, fg_color = button_orange ,text_color = button_white, command= lambda : pressed_key('DIVIDED'))
 times = customtkinter.CTkButton(app, text="*", width=75, height=75, font = font_button, fg_color = button_orange ,text_color = button_white, command= lambda : pressed_key('TIMES'))
-sqrt = customtkinter.CTkButton(app, text="√", width=75, height=75, font = font_button, fg_color = button_grey,text_color = button_black, command= lambda : pressed_key('SQRT'))
+sqrt_button = customtkinter.CTkButton(app, text="√", width=75, height=75, font = font_button, fg_color = button_grey,text_color = button_black, command= lambda : pressed_key('SQRT'))
 power = customtkinter.CTkButton(app, text="x²", width=75, height=75, font = font_button, fg_color = button_grey,text_color = button_black, command= lambda : pressed_key('POW'))
 egal = customtkinter.CTkButton(app, text="=", width=75, height=75,font = font_button, fg_color = button_orange ,text_color = button_white, command= lambda : pressed_key('EQUAL'))
 point = customtkinter.CTkButton(app, text=".", width=75, height=75, font = font_button, fg_color =button_dark ,text_color =button_white, command= lambda : pressed_key('.'))
@@ -177,7 +186,7 @@ plus.grid(row = 4, column = 3, padx=(10,10), pady=(10,10))
 minus.grid(row = 3, column = 3, padx=(10,10), pady=(10,10))
 times.grid(row = 2, column = 3, padx=(10,10), pady=(10,10))
 divided.grid(row = 1, column = 3, padx=(10,10), pady=(10,10))
-sqrt.grid(row = 1, column = 2, padx=(10,10), pady=(10,10))
+sqrt_button.grid(row = 1, column = 2, padx=(10,10), pady=(10,10))
 power.grid(row = 1, column = 1, padx=(10,10), pady=(10,10))
 point.grid(row = 5, column = 2, padx =(10,10), pady=(10,10))
 ac.grid(row = 1, column = 0, padx =(10,10), pady=(10,10))
