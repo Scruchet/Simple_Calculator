@@ -54,7 +54,7 @@ def execute_operation(operation):
         if operation == 'PLUS':
             result = nb2 + curent_nb
         elif operation == 'MINUS':
-            result = curent_nb - nb
+            result = curent_nb - nb2
             print(result)
         elif operation == 'TIMES':
             result = nb2 * curent_nb
