@@ -4,10 +4,14 @@ This project was created as part of the learning process for Python. It implemen
 
 ## Prerequisites
 
-Before running the program, ensure you have the `customtkinter` library installed. You can install it using the following command:
+Before running the program, ensure you have the `customtkinter` and `packaging` libraries installed. You can install it using the following command:
 
 ```bash
 sudo pip install customtkinter
+```
+
+```bash
+sudo pip install packaging
 ```
 
 # Run the Python program
