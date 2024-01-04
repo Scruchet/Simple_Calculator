@@ -3,9 +3,9 @@ import customtkinter
 
 error = False
 op = False
-nb_max_on_screen = 11
+nb_max_on_screen = 9
 curent_nb = False
-MAX_RESULT = 99999999999
+MAX_RESULT = 999999999
 stack_screen = []
 button_size = 35
 button_typeface = 'Courrier'
