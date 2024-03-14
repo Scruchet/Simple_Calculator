@@ -21,5 +21,5 @@ python calculator.py
 ```
 This will launch the calculator application. Feel free to perform calculations using the provided interface.
 
-# Conctact
+# Contact
 Thank you for visiting my project. If you have any comments or questions, please feel free to contact me via email at the following address: cruchetsimon@gmail.com
