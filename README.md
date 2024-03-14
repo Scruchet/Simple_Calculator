@@ -5,6 +5,9 @@ This project was created as part of the learning process for Python. It implemen
 ## Prerequisites
 
 Before running the program, ensure you have the `customtkinter` and `packaging` libraries installed. You can install it using the following command:
+```bash
+sudo apt-get install python3-tk
+```
 
 ```bash
 sudo pip install customtkinter
@@ -17,7 +20,7 @@ sudo pip install packaging
 # Run the Python program
 
 ```bash
-python calculator.py
+python3 calculator.py
 ```
 This will launch the calculator application. Feel free to perform calculations using the provided interface.
 
